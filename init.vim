@@ -1,6 +1,7 @@
 set exrc
 set nu
 set nohlsearch
+set encoding=utf-8
 set hidden
 set noerrorbells
 set nowrap
@@ -12,6 +13,7 @@ set incsearch
 set scrolloff=10
 set colorcolumn=80
 set signcolumn=yes
+set cmdheight=2
 
 " variables
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -31,12 +33,21 @@ call plug#begin(plugged)
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" grep
+Plug 'BurntSushi/ripgrep'
+
 " Tree
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 
 " Gruvbox
 Plug 'gruvbox-community/gruvbox'
+
+" Code autocompletion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Python
+Plug 'davidhalter/jedi-vim'
 
 call plug#end()
 
@@ -62,4 +73,10 @@ nnoremap <leader>ps :lua require'telescope.builtin'.grep_string({ search = vim.f
 nnoremap <leader>tt :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
+
+" CoC extensions
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pyright',
+  \ ]
 
