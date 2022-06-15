@@ -49,6 +49,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Python
 Plug 'davidhalter/jedi-vim'
 
+" Git
+Plug 'kdheepak/lazygit.nvim'
+Plug 'f-person/git-blame.nvim'
+
 call plug#end()
 
 "  highlights
@@ -73,6 +77,9 @@ nnoremap <leader>ps :lua require'telescope.builtin'.grep_string({ search = vim.f
 nnoremap <leader>tt :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
+
+" LazyGit
+nnoremap <silent> <leader>gg :LazyGit<CR>
 
 " CoC extensions
 let g:coc_global_extensions = [
