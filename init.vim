@@ -49,9 +49,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Python
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
-" Golang
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
-
 " Git
 Plug 'kdheepak/lazygit.nvim'
 Plug 'f-person/git-blame.nvim'
@@ -88,5 +85,6 @@ nnoremap <silent> <leader>gg :LazyGit<CR>
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pyright',
+  \ 'coc-go',
   \ ]
 
