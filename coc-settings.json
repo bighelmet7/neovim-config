@@ -1,0 +1,14 @@
+{
+  "languageserver": {
+    "go": {
+      "command": "${env:HOME}/go/bin/gopls",
+      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+      "trace.server": "verbose",
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "gofumpt": true
+      }
+    }
+  }
+}
+

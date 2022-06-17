@@ -49,6 +49,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Python
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
+" Golang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
+
 " Git
 Plug 'kdheepak/lazygit.nvim'
 Plug 'f-person/git-blame.nvim'
@@ -88,4 +91,7 @@ let g:coc_global_extensions = [
   \ 'coc-go',
   \ 'coc-spell-checker',
   \ ]
+
+" coc-go
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
