@@ -1,4 +1,5 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": ["rust", "go", "python"],
   "languageserver": {
     "go": {
       "command": "${env:HOME}/go/bin/gopls",
