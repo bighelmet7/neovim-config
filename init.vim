@@ -90,6 +90,7 @@ let g:coc_global_extensions = [
   \ 'coc-pyright',
   \ 'coc-go',
   \ 'coc-spell-checker',
+  \ 'coc-rls',
   \ ]
 
 " coc-go
