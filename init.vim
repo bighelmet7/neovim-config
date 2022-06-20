@@ -89,6 +89,7 @@ let g:coc_global_extensions = [
   \ 'coc-spell-checker',
   \ 'coc-rls',
   \ 'coc-json',
+  \ 'coc-html-css-support',
   \ ]
 
 " coc-go
