@@ -54,6 +54,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Python
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " Git
 Plug 'kdheepak/lazygit.nvim'
 Plug 'f-person/git-blame.nvim'
