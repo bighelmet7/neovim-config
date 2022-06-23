@@ -1,5 +1,11 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["rust", "go", "python"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "rust",
+    "go",
+    "python",
+    "json",
+    "html"
+  ],
   "languageserver": {
     "go": {
       "command": "${env:HOME}/go/bin/gopls",
@@ -12,4 +18,3 @@
     }
   }
 }
-
