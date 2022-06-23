@@ -10,6 +10,11 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
 set scrolloff=10
 set colorcolumn=80
 set signcolumn=yes
@@ -60,9 +65,13 @@ colorscheme gruvbox
 hi ColorColumn ctermbg=lightgrey guibg=lightgrey
 hi Normal guibg=none
 
-" issues with nvim.tree
-" https://github.com/kyazdani42/nvim-tree.lua/issues/767#issuecomment-962637481
-lua require'nvim-tree'.setup {}
+" Nvim-tree setup
+" TODO (bighelmet7): it would be nice to move this into a lua/ directory
+lua <<EOF
+require('nvim-tree').setup({
+    git = { ignore = false },
+})
+EOF
 
 " Plugins and remaps
 " n is for normal, nore, no recursive, map spe
@@ -90,6 +99,7 @@ let g:coc_global_extensions = [
   \ 'coc-rls',
   \ 'coc-json',
   \ 'coc-html-css-support',
+  \ 'coc-prettier',
   \ ]
 
 " coc-go
