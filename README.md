@@ -37,10 +37,21 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 - ohmyzsh!
 - font-hack-nerd-font
 - powerlevel10k (ohmyzsh installation)
+- fig.io
 - brew install lazygit
 - brew install ripgrep
 - pip3 install pynvim
 - pip3 install jedi
 - npm install -g neovim
 - RUST only: rustup component add rls rust-analysis rust-src
+
+# links
+- https://github.com/romkatv/powerlevel10k#oh-my-zsh
+- https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks
+- https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts
+- https://github.com/ryanoasis/vim-devicons/wiki/Installation
+- https://github.com/kyazdani42/nvim-tree.lua
+- https://github.com/junegunn/vim-plug
+- https://devhints.io/lua
+- https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/
 
