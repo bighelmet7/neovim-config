@@ -1,7 +1,7 @@
 set exrc
 set nu
 set nohlsearch
-set encoding=utf-8
+set encoding=utf8
 set hidden
 set noerrorbells
 set nowrap
