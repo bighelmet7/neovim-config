@@ -1,7 +1,8 @@
 -- TODO (bighelmet7): migrate init.vim to lua format
 -- TODO (bighelmet7): it would be nice if we could move this into separate files
 
--- nvim-tree.lua
+-- nvim-tree.lua and nvim-web-devicons
+require("nvim-web-devicons").setup{ default = true }
 require("nvim-tree").setup({
     git = { ignore = false },
 })
