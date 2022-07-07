@@ -68,30 +68,7 @@ colorscheme gruvbox
 hi ColorColumn ctermbg=lightgrey guibg=lightgrey
 hi Normal guibg=none
 
-" Nvim-tree setup
-" TODO (bighelmet7): it would be nice to move this into a lua/ directory
-lua <<EOF
-require('nvim-tree').setup({
-    git = { ignore = false },
-})
-EOF
-
 " Plugins and remaps
-" n is for normal, nore, no recursive, map spe
-" Telescope
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <leader>ps :lua require'telescope.builtin'.grep_string({ search = vim.fn.input("Grep for > ") })<CR>
-
-" nvim.tree.lua
-nnoremap <leader>tt :NvimTreeToggle<CR>
-nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
-
-" LazyGit
-nnoremap <silent> <leader>gg :LazyGit<CR>
 
 " CoC extensions
 let g:coc_global_extensions = [
@@ -107,4 +84,7 @@ let g:coc_global_extensions = [
 
 " coc-go
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+
+" lua config
+lua require("bighelmet7")
 
