@@ -33,9 +33,10 @@ vim.bo.smartindent = true
 -- Plugins
 --
 -- nvim-tree.lua and nvim-web-devicons
-require("nvim-web-devicons").setup{ default = true }
+require("nvim-web-devicons").setup({ default = true })
 require("nvim-tree").setup({
     git = { ignore = false },
+    view = { side = "left" },
 })
 
 vim.api.nvim_set_keymap('n', '<leader>tt', ':NvimTreeToggle<CR>', { noremap = true })
