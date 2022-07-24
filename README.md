@@ -44,6 +44,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 - pip3 install jedi
 - npm install -g neovim
 - RUST only: rustup component add rls rust-analysis rust-src
+- packer
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
 
 # links
 - https://github.com/romkatv/powerlevel10k#oh-my-zsh
