@@ -22,6 +22,3 @@ require("lualine").setup(
         }
     }
 )
-
--- spellsitter
-require("spellsitter").setup()

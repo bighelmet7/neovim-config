@@ -48,10 +48,7 @@ return require("packer").startup(
             -- it will fail the first time
             -- https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation#packernvim
             "nvim-treesitter/nvim-treesitter",
-            run = ":TSUpdate",
-            highlight = {
-                enable = true
-            }
+            run = ":TSUpdate"
         }
 
         -- statusline
@@ -62,8 +59,5 @@ return require("packer").startup(
 
         -- formatting
         use "sbdchd/neoformat"
-
-        -- spellchecking
-        use "lewis6991/spellsitter.nvim"
     end
 )
