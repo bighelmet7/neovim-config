@@ -30,7 +30,7 @@ require("lspconfig").pyright.setup(config())
 -- Go
 require("lspconfig").gopls.setup(config({
     cmd = { "gopls", "serve" },
-	    settings = {
+	settings = {
 	    gopls = {
 			analyses = {
 				unusedparams = true,
