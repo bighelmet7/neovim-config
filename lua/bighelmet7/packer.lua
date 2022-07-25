@@ -57,6 +57,9 @@ return require("packer").startup(
             requires = {"kyazdani42/nvim-web-devicons", opt = true}
         }
 
+        -- Coc
+        use {"neoclide/coc.nvim", branch = "release"}
+
         -- formatting
         use "sbdchd/neoformat"
     end
