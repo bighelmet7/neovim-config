@@ -43,6 +43,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 - pip3 install pynvim
 - pip3 install jedi
 - npm install -g neovim
+- npm install -g pyright
 - RUST only: rustup component add rls rust-analysis rust-src
 - packer
 ```
