@@ -26,4 +26,3 @@ vim.opt.wrap = false
 vim.opt.colorcolumn = "80"
 vim.opt.signcolumn = "yes"
 vim.opt.relativenumber = true
-
