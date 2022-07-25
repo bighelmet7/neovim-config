@@ -97,3 +97,6 @@ require("lspconfig").gopls.setup(
         }
     )
 )
+
+-- HTML
+require("lspconfig").html.setup(config())

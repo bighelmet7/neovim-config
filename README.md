@@ -53,6 +53,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 - brew install jq
 - npm install -g js-beautify
 - npm install -g lua-fmt
+- npm i -g vscode-langservers-extracted
 
 
 # links
