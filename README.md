@@ -50,6 +50,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
+- brew install jq
+- npm install -g js-beauty
+- npm install -g lua-fmt
 
 
 # links
