@@ -6,10 +6,14 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- lsp
+  -- NOTE: nvim-lspconfig doesn't configure keymap by default:
+  -- https://github.com/neovim/nvim-lspconfig#suggested-configuration
   use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/nvim-cmp'
+  use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+  use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
   -- theme
   use 'folke/tokyonight.nvim'
