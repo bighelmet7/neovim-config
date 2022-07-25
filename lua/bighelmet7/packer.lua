@@ -33,5 +33,14 @@ return require('packer').startup(function()
   -- CoC
   use 'neoclide/coc.nvim'
 
+  -- treesitter
+  -- treesitter vs LSP: https://github.com/nvim-treesitter/nvim-treesitter/issues/484#issuecomment-694388223
+  use {
+      -- it will fail the first time
+      -- https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation#packernvim
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
+
 end)
 
