@@ -12,6 +12,13 @@ require("nvim-tree").setup({
 -- Telescope
 require("telescope.builtin")
 
+-- Lualine
+require('lualine').setup({
+    options = {
+        theme = "tokyonight"
+    }
+})
+
 -- CoC
 --
 vim.g.coc_global_extensions = {
