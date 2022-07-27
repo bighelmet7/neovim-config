@@ -100,3 +100,6 @@ require("lspconfig").gopls.setup(
 
 -- HTML
 require("lspconfig").html.setup(config())
+
+-- SQL
+require("lspconfig").sqlls.setup(config())
