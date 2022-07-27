@@ -56,6 +56,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 - npm i -g vscode-langservers-extracted
 - go install github.com/lighttiger2505/sqls@latest
 - sqls config: https://github.com/lighttiger2505/sqls#db-configuration
+- npm i -g vscode-langservers-extracted
 
 
 # links

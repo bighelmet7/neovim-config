@@ -103,3 +103,6 @@ require("lspconfig").html.setup(config())
 
 -- SQL
 require("lspconfig").sqls.setup(config())
+
+-- Javascript
+require("lspconfig").eslint.setup(config())
