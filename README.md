@@ -55,6 +55,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 - npm install -g lua-fmt
 - npm i -g vscode-langservers-extracted
 - npm i -g sql-language-server
+- sqlrc: https://github.com/joe-re/sql-language-server
 
 
 # links
