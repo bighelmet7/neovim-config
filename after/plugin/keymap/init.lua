@@ -1,4 +1,9 @@
 local nnoremap = require("bighelmet7.keymap").nnoremap
+local tnoremap = require("bighelmet7.keymap").tnoremap
+
+-- local terminal
+nnoremap("<leader>z", ":vsplit term://zsh <CR>", {silent = true})
+tnoremap("<leader>tq", "<C-\\><C-N>")
 
 -- nvim-tree
 nnoremap("<leader>tt", ":NvimTreeToggle<CR>")
