@@ -34,29 +34,42 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
 # Dependencies
+## terminal
 - ohmyzsh!
 - font-hack-nerd-font
 - powerlevel10k (ohmyzsh installation)
 - fig.io
+
+## neovim plugin dependencies
 - brew install lazygit
 - brew install ripgrep
+- brew install jq
 - pip3 install pynvim
-- pip3 install jedi
 - npm install -g neovim
-- npm install -g pyright
-- RUST only: rustup component add rls rust-analysis rust-src
 - packer
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
-- brew install jq
+
+## neoformat dependencies
 - npm install -g js-beautify
 - npm install -g lua-fmt
-- npm i -g vscode-langservers-extracted
+
+## LSP dependencies
+- go install golang.org/x/tools/gopls@latest
 - go install github.com/lighttiger2505/sqls@latest
-- sqls config: https://github.com/lighttiger2505/sqls#db-configuration
 - npm i -g vscode-langservers-extracted
+- npm install -g pyright
+
+
+# LSP config
+## sqls
+- sqls config: https://github.com/lighttiger2505/sqls#db-configuration
+
+you need to create a config.yaml with all of the databases connections, the config
+should be in ~/.config/sqls/config.yaml, you can follow the example of the above
+link.
 
 
 # links
