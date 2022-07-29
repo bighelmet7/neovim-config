@@ -65,5 +65,8 @@ return require("packer").startup(
 
         -- bufferline (mainly for tabs and groups)
         use {"akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons"}
+
+        -- sqls
+        use "nanotee/sqls.nvim"
     end
 )
