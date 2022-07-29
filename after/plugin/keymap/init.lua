@@ -24,3 +24,8 @@ nnoremap(
 
 -- LazyGit
 nnoremap("<leader>gg", ":LazyGit<CR>", {noremap = true, silent = true})
+
+-- bufferline
+nnoremap("<S-l>", ":BufferLineCycleNext<CR>")
+nnoremap("<S-h>", ":BufferLineCyclePrev<CR>")
+nnoremap("<S-ESC>", ":BufferLinePickClose<CR>")
