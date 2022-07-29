@@ -84,8 +84,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 - sqls config: https://github.com/lighttiger2505/sqls#db-configuration
 
-you need to create a config.yaml with all of the databases connections, the config
-should be in ~/.config/sqls/config.yaml, you can follow the example of the above
+you need to create a config.yml with all of the databases connections, the config
+should be in ~/.config/sqls/config.yml, you can follow the example of the above
 link.
 
 # links
