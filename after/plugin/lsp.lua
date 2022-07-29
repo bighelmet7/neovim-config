@@ -106,3 +106,8 @@ require("lspconfig").sqls.setup(config())
 
 -- Javascript
 require("lspconfig").eslint.setup(config())
+
+-- yaml
+-- NOTE: for more information:
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls
+require("lspconfig").yamlls.setup(config())
