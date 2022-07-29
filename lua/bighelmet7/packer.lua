@@ -62,5 +62,8 @@ return require("packer").startup(
 
         -- formatting
         use "sbdchd/neoformat"
+
+        -- bufferline (mainly for tabs and groups)
+        use {"akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons"}
     end
 )
