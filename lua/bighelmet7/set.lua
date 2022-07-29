@@ -1,6 +1,12 @@
 -- mapleader
 vim.g.mapleader = " "
 
+-- https://prettier.io/docs/en/vim.html#neoformathttpsgithubcomsbdchdneoformat
+vim.g.neoformat_try_node_exe = 1
+vim.g.neoformat_try_formatprg = 1
+-- NOTE: really handy when debugging
+-- vim.g.neoformat_verbose = 1
+
 -- global options
 vim.opt.hlsearch = false
 vim.opt.hidden = true
@@ -10,6 +16,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.incsearch = true
 vim.opt.scrolloff = 10
 vim.opt.cmdheight = 1
+vim.opt.termguicolors = true -- for bufferline
 
 -- local to buffer
 vim.opt.swapfile = false
