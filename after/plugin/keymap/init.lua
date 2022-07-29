@@ -29,3 +29,11 @@ nnoremap("<leader>gg", ":LazyGit<CR>", {noremap = true, silent = true})
 nnoremap("<S-l>", ":BufferLineCycleNext<CR>")
 nnoremap("<S-h>", ":BufferLineCyclePrev<CR>")
 nnoremap("<S-ESC>", ":BufferLinePickClose<CR>")
+
+-- sqls
+nnoremap("<leader>sd", ":SqlsShowDatabases<CR>")
+nnoremap("<leader>st", ":SqlsShowTables<CR>")
+nnoremap("<leader>ss", ":SqlsShowSchemas<CR>")
+nnoremap("<leader>sc", ":SqlsSwitchConnection<CR>")
+nnoremap("<leader>se", ":SqlsExecuteQuery<CR>")
+nnoremap("<leader>sev", ":SqlsExecuteQueryVertical<CR>")
