@@ -119,3 +119,18 @@ require("lspconfig").eslint.setup(config())
 -- NOTE: for more information:
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls
 require("lspconfig").yamlls.setup(config())
+
+-- rust
+require("lspconfig").rls.setup(
+    config(
+        {
+            settings = {
+                rust = {
+                    unstable_features = true,
+                    build_on_save = false,
+                    all_features = true
+                }
+            }
+        }
+    )
+)
