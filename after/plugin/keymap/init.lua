@@ -5,6 +5,14 @@ local tnoremap = require("bighelmet7.keymap").tnoremap
 nnoremap("<leader>z", ":belowright split term://zsh <CR>", {silent = true})
 tnoremap("<leader><ESC>", "<C-\\><C-N>")
 
+-- LSP
+nnoremap(
+    "<leader>ee",
+    function()
+        vim.diagnostic.open_float()
+    end
+)
+
 -- nvim-tree
 nnoremap("<leader>tt", ":NvimTreeToggle<CR>")
 nnoremap("<leader>r", ":NvimTreeRefresh<CR>")
