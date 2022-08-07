@@ -66,7 +66,6 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 ## neoformat dependencies
 
-- npm install -g js-beautify
 - npm install -g lua-fmt
 - npm install -g prettier
 
