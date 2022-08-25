@@ -17,6 +17,7 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 10
 vim.opt.cmdheight = 1
 vim.opt.termguicolors = true -- for bufferline
+vim.opt.completeopt = "menu,menuone,noselect"
 
 -- local to buffer
 vim.opt.swapfile = false
