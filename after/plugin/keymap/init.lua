@@ -45,3 +45,10 @@ nnoremap("<leader>ss", ":SqlsShowSchemas<CR>")
 nnoremap("<leader>sc", ":SqlsSwitchConnection<CR>")
 nnoremap("<leader>se", ":SqlsExecuteQuery<CR>")
 nnoremap("<leader>sev", ":SqlsExecuteQueryVertical<CR>")
+
+-- dap
+nnoremap("<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>")
+nnoremap("<leader>dc", ":lua require'dap'.continue()<CR>")
+nnoremap("<leader>do", ":lua require'dap'.step_over()<CR>")
+nnoremap("<leader>di", ":lua require'dap'.step_into()<CR>")
+nnoremap("<leader>dr", ":lua require'dap'.repl.open()<CR>")

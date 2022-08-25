@@ -68,5 +68,8 @@ return require("packer").startup(
 
         -- sqls
         use "nanotee/sqls.nvim"
+
+        -- dap
+        use "mfussenegger/nvim-dap"
     end
 )
