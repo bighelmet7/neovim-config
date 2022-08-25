@@ -15,8 +15,8 @@ return require("packer").startup(
         use "hrsh7th/cmp-buffer"
         use "hrsh7th/cmp-path"
         use "hrsh7th/cmp-cmdline"
-        use "saadparwaiz1/cmp_luasnip" -- Snippets source for nvim-cmp
         use "L3MON4D3/LuaSnip" -- Snippets plugin
+        use "saadparwaiz1/cmp_luasnip" -- Snippets source for nvim-cmp
 
         -- theme
         use "folke/tokyonight.nvim"
@@ -58,9 +58,6 @@ return require("packer").startup(
             "nvim-lualine/lualine.nvim",
             requires = {"kyazdani42/nvim-web-devicons", opt = true}
         }
-
-        -- Coc
-        use {"neoclide/coc.nvim", branch = "release"}
 
         -- formatting
         use "sbdchd/neoformat"
