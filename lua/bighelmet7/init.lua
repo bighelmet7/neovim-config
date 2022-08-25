@@ -23,13 +23,6 @@ require("lualine").setup(
     }
 )
 
--- CoC
---
-vim.g.coc_global_extensions = {
-    "coc-snippets",
-    "coc-spell-checker"
-}
-
 -- bufferline
 --
 require("bufferline").setup(
