@@ -47,8 +47,33 @@ nnoremap("<leader>se", ":SqlsExecuteQuery<CR>")
 nnoremap("<leader>sev", ":SqlsExecuteQueryVertical<CR>")
 
 -- dap
-nnoremap("<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>")
-nnoremap("<leader>dc", ":lua require'dap'.continue()<CR>")
-nnoremap("<leader>do", ":lua require'dap'.step_over()<CR>")
-nnoremap("<leader>di", ":lua require'dap'.step_into()<CR>")
-nnoremap("<leader>dr", ":lua require'dap'.repl.open()<CR>")
+nnoremap(
+    "<leader>db",
+    function()
+        require("dap").toggle_breakpoint()
+    end
+)
+nnoremap(
+    "<leader>dc",
+    function()
+        require("dap").continue()
+    end
+)
+nnoremap(
+    "<leader>do",
+    function()
+        require("dap").step_over()
+    end
+)
+nnoremap(
+    "<leader>di",
+    function()
+        require("dap").step_into()
+    end
+)
+nnoremap(
+    "<leader>dr",
+    function()
+        require("dap").repl.open()
+    end
+)
