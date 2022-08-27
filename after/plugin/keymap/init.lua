@@ -22,13 +22,13 @@ nnoremap("<leader>r", ":NvimTreeRefresh<CR>")
 nnoremap("<leader>n", ":NvimTreeFindFile<CR>")
 
 -- Telescope
-nnoremap("<leader>fk", "<CMD>Telescope keymaps<CR>")
-nnoremap("<leader>ff", "<CMD>Telescope find_files<CR>")
-nnoremap("<leader>fg", "<CMD>Telescope live_grep<CR>")
-nnoremap("<leader>fb", "<CMD>Telescope buffers<CR>")
-nnoremap("<leader>fh", "<CMD>Telescope help_tags<CR>")
+nnoremap("<leader>tk", "<CMD>Telescope keymaps<CR>")
+nnoremap("<leader>tf", "<CMD>Telescope find_files<CR>")
+nnoremap("<leader>tg", "<CMD>Telescope live_grep<CR>")
+nnoremap("<leader>tb", "<CMD>Telescope buffers<CR>")
+nnoremap("<leader>th", "<CMD>Telescope help_tags<CR>")
 nnoremap(
-    "<leader>ps",
+    "<leader>ts",
     function()
         require("telescope.builtin").grep_string({search = vim.fn.input("Grep For > ")})
     end
