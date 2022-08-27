@@ -1,6 +1,9 @@
 local nnoremap = require("bighelmet7.keymap").nnoremap
 local tnoremap = require("bighelmet7.keymap").tnoremap
 
+-- convenient mappings
+nnoremap("<ESC><ESC>", ":bd<CR>")
+
 -- local terminal
 nnoremap("<leader>z", ":belowright split term://zsh <CR>", {silent = true})
 tnoremap("<leader><ESC>", "<C-\\><C-N>")
