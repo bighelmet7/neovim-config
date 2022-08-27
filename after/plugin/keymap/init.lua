@@ -37,6 +37,8 @@ nnoremap("<leader>gg", ":LazyGit<CR>", {noremap = true, silent = true})
 -- bufferline
 nnoremap("<S-l>", ":BufferLineCycleNext<CR>")
 nnoremap("<S-h>", ":BufferLineCyclePrev<CR>")
+nnoremap("<S-k>", ":BufferLineCloseRight<CR>")
+nnoremap("<S-p>", ":BufferLineTogglePin<CR>")
 nnoremap("<S-ESC>", ":BufferLinePickClose<CR>")
 
 -- sqls
