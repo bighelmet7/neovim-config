@@ -76,6 +76,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 - npm i -g vscode-langservers-extracted
 - npm i -g pyright
 - npm i -g yaml-language-server
+- brew install lua-language-server
 
 # LSP config
 
