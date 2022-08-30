@@ -69,6 +69,10 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 - npm install -g lua-fmt
 - npm install -g prettier
 
+## DAP dependencies
+
+- python: pip install debugpy
+
 ## LSP dependencies
 
 - go install golang.org/x/tools/gopls@latest
