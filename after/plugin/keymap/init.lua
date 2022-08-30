@@ -95,3 +95,23 @@ nnoremap(
         require("dap").terminate()
     end
 )
+
+-- dap-ui
+nnoremap(
+    "<leader>dao",
+    function()
+        require("dapui").open({})
+    end
+)
+nnoremap(
+    "<leader>dac",
+    function()
+        require("dapui").close({})
+    end
+)
+nnoremap(
+    "<leader>dat",
+    function()
+        require("dapui").toggle({})
+    end
+)
