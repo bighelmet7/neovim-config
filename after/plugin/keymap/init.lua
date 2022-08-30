@@ -1,4 +1,5 @@
 local nnoremap = require("bighelmet7.keymap").nnoremap
+local vnoremap = require("bighelmet7.keymap").vnoremap
 local tnoremap = require("bighelmet7.keymap").tnoremap
 
 -- convenient mappings
@@ -113,5 +114,25 @@ nnoremap(
     "<leader>dat",
     function()
         require("dapui").toggle({})
+    end
+)
+
+-- dap-python
+nnoremap(
+    "<leader>dn",
+    function()
+        require("dap-python").test_method({})
+    end
+)
+nnoremap(
+    "<leader>df",
+    function()
+        require("dap-python").test_class({})
+    end
+)
+vnoremap(
+    "<leader>ds<ESC>",
+    function()
+        require("dap-python").debug_selection({})
     end
 )
