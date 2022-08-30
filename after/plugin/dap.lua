@@ -1,11 +1,18 @@
+local helper = require("bighelmet7.helper")
 local dap = require("dap")
+-- logs are in vim.fn.stdpath('cache') .. "/dap.log"
+dap.set_log_level("DEBUG")
+
+local cwd = vim.fn.getcwd()
+local poetry_bin = cwd .. "/../.env/bin/poetry"
 local homebrew_bin = "/opt/homebrew/bin"
 
 -- Python
 dap.adapters.python = {
     type = "executable",
-    command = "python3",
-    args = {"-m", "debugpy.adapter"}
+    command = poetry_bin,
+    args = {"run", "python", "-m", "debugpy.adapter"},
+    options = {cwd = cwd}
 }
 dap.configurations.python = {
     {
@@ -14,11 +21,11 @@ dap.configurations.python = {
         name = "Launch file",
         program = "${file}",
         pythonPath = function()
-            local cwd = vim.fn.getcwd()
-            if vim.fn.executable(cwd .. "/.env/bin/python") == 1 then
-                return cwd .. "/.env/bin/python"
-            elseif vim.fn.executable(cwd .. "/.venv/bin/python") == 1 then
-                return cwd .. "/.venv/bin/python"
+            local env_cmd = table.concat({poetry_bin, "env", "info", "-p"}, " ")
+            local env_path = helper.execute_cmd(env_cmd, true)
+            local python_env = env_path .. "/bin/python"
+            if vim.fn.executable(python_env) == 1 then
+                return python_env
             else
                 return homebrew_bin .. "/python3"
             end
