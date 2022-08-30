@@ -66,6 +66,12 @@ nnoremap(
     end
 )
 nnoremap(
+    "<leader>dcl",
+    function()
+        require("dap").close()
+    end
+)
+nnoremap(
     "<leader>do",
     function()
         require("dap").step_over()
@@ -81,5 +87,11 @@ nnoremap(
     "<leader>dr",
     function()
         require("dap").repl.open()
+    end
+)
+nnoremap(
+    "<leader>dt",
+    function()
+        require("dap").terminate()
     end
 )
