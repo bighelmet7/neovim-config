@@ -78,6 +78,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 - go install golang.org/x/tools/gopls@latest
 - go install github.com/lighttiger2505/sqls@latest
 - npm i -g vscode-langservers-extracted
+- npm install -g typescript typescript-language-server
 - npm i -g pyright
 - npm i -g yaml-language-server
 - brew install lua-language-server
