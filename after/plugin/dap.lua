@@ -14,6 +14,10 @@ local dap_python = require("dap-python")
 dap_python.test_runner = "pytest"
 dap_python.setup(python_env)
 
+-- Go
+local dap_golang = require("dap-go")
+dap_golang.setup()
+
 -- Dap UI
 -- More: https://github.com/rcarriga/nvim-dap-ui
 require("dapui").setup(
