@@ -73,5 +73,8 @@ return require("packer").startup(
         use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
         use {"mfussenegger/nvim-dap-python", requires = {"mfussenegger/nvim-dap"}}
         use {"leoluz/nvim-dap-go", requires = {"mfussenegger/nvim-dap"}}
+
+        -- shade
+        use "sunjon/shade.nvim"
     end
 )
