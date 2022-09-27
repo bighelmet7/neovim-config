@@ -76,5 +76,13 @@ return require("packer").startup(
 
         -- shade
         use "sunjon/shade.nvim"
+
+        -- tmux
+        use {
+            "aserowy/tmux.nvim",
+            config = function()
+                require("tmux").setup()
+            end
+        }
     end
 )
