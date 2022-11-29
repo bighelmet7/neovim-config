@@ -157,6 +157,9 @@ require("lspconfig").tsserver.setup(config())
 -- Deno
 require("lspconfig").denols.setup(config())
 
+-- AstroJS
+require("lspconfig").astro.setup(config())
+
 -- yaml
 -- NOTE: for more information:
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls
