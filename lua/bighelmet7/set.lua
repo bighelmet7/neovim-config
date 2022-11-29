@@ -37,3 +37,8 @@ vim.opt.relativenumber = true
 vim.opt.foldenable = false -- disable automatic folding when launching nvim
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+-- others
+vim.g.markdown_fenced_languages = {
+    "ts=typescript"
+}

@@ -154,6 +154,9 @@ require("lspconfig").eslint.setup(config())
 -- Typescript
 require("lspconfig").tsserver.setup(config())
 
+-- Deno
+require("lspconfig").denols.setup(config())
+
 -- yaml
 -- NOTE: for more information:
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls
