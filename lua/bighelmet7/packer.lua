@@ -19,7 +19,15 @@ return require("packer").startup(
         use "saadparwaiz1/cmp_luasnip" -- Snippets source for nvim-cmp
 
         -- theme
-        use "folke/tokyonight.nvim"
+        use(
+            {
+                "rose-pine/neovim",
+                as = "rose-pine",
+                config = function()
+                    vim.cmd("colorscheme rose-pine")
+                end
+            }
+        )
 
         -- nvim-tree
         use {
