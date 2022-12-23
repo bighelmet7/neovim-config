@@ -1,8 +1,6 @@
 local nnoremap = require("bighelmet7.keymap").nnoremap
 local inoremap = require("bighelmet7.keymap").inoremap
 
-vim.lsp.set_log_level("debug")
-
 -- NOTE: https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
