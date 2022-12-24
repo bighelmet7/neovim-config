@@ -89,5 +89,11 @@ return require("packer").startup(
                 require("tmux").setup()
             end
         }
+
+        -- rust-tools
+        use {
+            "simrat39/rust-tools.nvim",
+            requires = {{"nvim-lua/plenary.nvim", "mfussenegger/nvim-dap"}}
+        }
     end
 )
