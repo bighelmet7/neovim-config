@@ -1,8 +1,6 @@
 local nnoremap = require("bighelmet7.keymap").nnoremap
 local inoremap = require("bighelmet7.keymap").inoremap
 
-local rt = require("rust-tools")
-
 -- NOTE: https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -168,18 +166,7 @@ require("lspconfig").astro.setup(config())
 require("lspconfig").yamlls.setup(config())
 
 -- rust (rust-tools provides more functionalities than the std nvim-lsp)
-rt.setup(
-    config(
-        {
-            tools = {
-                --rust-tools options
-                inlay_hints = {
-                    parameter_hints_prefix = "<= "
-                }
-            }
-        }
-    )
-)
+require("lspconfig").rust_analyzer.setup(config())
 
 -- lua
 require("lspconfig").sumneko_lua.setup(
