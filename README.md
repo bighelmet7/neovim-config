@@ -66,12 +66,13 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 ## neoformat dependencies
 
-- npm install -g lua-fmt
+- cargo install stylua (https://github.com/JohnnyMorganz/StyLua)
 - npm install -g prettier
 
 ## DAP dependencies
 
 - python: pip install debugpy
+- rust: brew install llvm
 
 ## LSP dependencies
 
