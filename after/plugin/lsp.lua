@@ -29,8 +29,15 @@ lsp.configure('sumneko_lua', {
     }
 })
 
+lsp.configure('sqls', {
+    on_attach = function(client, bufnr)
+        require('sqls').on_attach(client, bufnr)
+    end
+})
+
 lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true,
 })
+
