@@ -54,6 +54,10 @@ nnoremap("<leader>sc", ":SqlsSwitchConnection<CR>")
 nnoremap("<leader>se", ":SqlsExecuteQuery<CR>")
 nnoremap("<leader>sev", ":SqlsExecuteQueryVertical<CR>")
 
+-- markdown-preview
+nnoremap("<leader>mp", ":MarkdownPreview<CR>")
+nnoremap("<leader>ms", ":MarkdownPreviewStop<CR>")
+
 -- dap
 nnoremap(
     "<leader>db",
