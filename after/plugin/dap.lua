@@ -6,9 +6,8 @@ dap.set_log_level("DEBUG")
 
 local cwd = vim.fn.getcwd()
 local poetry_bin = cwd .. "/../.env/bin/poetry"
-local env_path = helper.execute_cmd(table.concat({ poetry_bin, "env", "info", "-p" }, " "), true)
+local env_path = helper.execute_cmd(table.concat({poetry_bin, "env", "info", "-p"}, " "), true)
 local python_env = env_path .. "/bin/python"
-
 
 -- Python
 local dap_python = require("dap-python")
@@ -21,24 +20,24 @@ dap_golang.setup()
 
 -- lldb
 dap.adapters.lldb = {
-    type = 'executable',
-    command = '/opt/homebrew/opt/llvm/bin/lldb-vscode', -- adjust as needed, must be absolute path
-    name = 'lldb'
+    type = "executable",
+    command = "/opt/homebrew/opt/llvm/bin/lldb-vscode", -- adjust as needed, must be absolute path
+    name = "lldb"
 }
 
 -- Cpp
 dap.configurations.cpp = {
     {
-        name = 'Launch',
-        type = 'lldb',
-        request = 'launch',
+        name = "Launch",
+        type = "lldb",
+        request = "launch",
         program = function()
-            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+            return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
         end,
-        cwd = '${workspaceFolder}',
+        cwd = "${workspaceFolder}",
         stopOnEntry = false,
-        args = {},
-    },
+        args = {}
+    }
 }
 
 dap.configurations.c = dap.configurations.cpp
@@ -50,10 +49,10 @@ dap.configurations.rust = dap.configurations.cpp
 -- More: https://github.com/rcarriga/nvim-dap-ui
 require("dapui").setup(
     {
-        icons = { expanded = "▾", collapsed = "▸" },
+        icons = {expanded = "▾", collapsed = "▸"},
         mappings = {
             -- Use a table to apply multiple mappings
-            expand = { "<CR>", "<2-LeftMouse>" },
+            expand = {"<CR>", "<2-LeftMouse>"},
             open = "o",
             remove = "d",
             edit = "e",
@@ -92,10 +91,10 @@ require("dapui").setup(
             max_width = nil, -- Floats will be treated as percentage of your screen.
             border = "single", -- Border style. Can be "single", "double" or "rounded"
             mappings = {
-                close = { "q", "<Esc>" }
+                close = {"q", "<Esc>"}
             }
         },
-        windows = { indent = 1 },
+        windows = {indent = 1},
         render = {
             max_type_length = nil -- Can be integer or nil.
         }
