@@ -1,14 +1,5 @@
 # Terminal setup
 
-- ohmyzsh!
-
-```bash
-# make sure you are running a supported zsh version
-# then install ohmyzsh
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
 - fonts
 
 ```
@@ -18,19 +9,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 # brew install --cask font-<font_name>-font
-```
-
-- powerlevel10k
-
-```
-# then we need powerlevel10k for ohmyzsh, which will handle
-# install pk10
-
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-# don't forget to update your .zshrc
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
 - macos terminal
@@ -45,10 +23,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ## terminal
 
-- ohmyzsh!
 - font-hack-nerd-font
-- powerlevel10k (ohmyzsh installation)
-- fig.io
 
 ## neovim plugin dependencies
 
