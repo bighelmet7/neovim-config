@@ -47,12 +47,23 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
+## create .env file
+
+```
+python3 -m venv ~/.config/nvim .env
+cd ~/.config/nvim
+. .env/bin/activate
+pip install pynvim
+```
+
 ## neoformat dependencies
 
 - cargo install stylua (https://github.com/JohnnyMorganz/StyLua)
 - npm install -g prettier
 
 ## DAP dependencies
+
+:warning: use ~/.config/nvim/.env virtualenv
 
 - python: pip install debugpy
 - rust: brew install llvm
