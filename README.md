@@ -36,6 +36,7 @@ brew install --cask font-hack-nerd-font
 
 - brew install lazygit
 - brew install ripgrep
+- brew install fd
 - brew install jq
 - pip3 install pynvim
 - npm install -g neovim
