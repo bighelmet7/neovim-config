@@ -4,6 +4,9 @@ vim.g.mapleader = " "
 -- https://prettier.io/docs/en/vim.html#neoformathttpsgithubcomsbdchdneoformat
 vim.g.neoformat_try_node_exe = 1
 vim.g.neoformat_try_formatprg = 1
+vim.g.python_host_skip_check = 1
+vim.g.python3_host_skip_check = 1
+
 -- NOTE: really handy when debugging
 -- vim.g.neoformat_verbose = 1
 

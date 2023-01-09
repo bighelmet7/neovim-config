@@ -1,6 +1,4 @@
 require("bighelmet7.set")
--- dap
-require("bighelmet7.dap")
 
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
@@ -12,11 +10,11 @@ vim.opt.termguicolors = true
 -- Plugins
 --
 -- nvim-tree.lua and nvim-web-devicons
-require("nvim-web-devicons").setup({ default = true })
+require("nvim-web-devicons").setup({default = true})
 require("nvim-tree").setup(
     {
-        git = { ignore = false },
-        view = { side = "left" },
+        git = {ignore = false},
+        view = {side = "left"},
         renderer = {
             icons = {
                 glyphs = {
@@ -48,7 +46,7 @@ require("bufferline").setup(
     {
         options = {
             offsets = {
-                { filetype = "NvimTree", text = "File Explorer", padding = 1 }
+                {filetype = "NvimTree", text = "File Explorer", padding = 1}
             },
             max_name_length = 14,
             max_prefix_length = 13,
@@ -57,5 +55,3 @@ require("bufferline").setup(
         }
     }
 )
-
-
