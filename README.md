@@ -1,5 +1,11 @@
 # Terminal setup
 
+- oh-my-zsh!
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 - fonts
 
 ```
@@ -23,6 +29,7 @@ brew install --cask font-hack-nerd-font
 
 ## terminal
 
+- oh-my-zsh!
 - font-hack-nerd-font
 
 ## neovim plugin dependencies
