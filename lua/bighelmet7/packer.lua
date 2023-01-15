@@ -9,7 +9,14 @@ return require("packer").startup(function(use)
 	-- NOTE: nvim-lspconfig doesn't configure keymap by default:
 	-- https://github.com/neovim/nvim-lspconfig#suggested-configuration
 	use("neovim/nvim-lspconfig")
-	use({ "hrsh7th/nvim-cmp", requires = { "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip" } })
+	use({
+		"hrsh7th/nvim-cmp",
+		requires = {
+			"hrsh7th/cmp-nvim-lsp",
+			"L3MON4D3/LuaSnip",
+			"saadparwaiz1/cmp_luasnip",
+		},
+	})
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-cmdline")
