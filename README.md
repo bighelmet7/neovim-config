@@ -78,6 +78,7 @@ pip install pynvim
 - npm i -g yaml-language-server
 - brew install lua-language-server
 - brew install deno
+- cargo install stylua
 - npm install -g @astrojs/language-server
 - rustup component add rust-analyzer && ln -s $(rustup which --toolchain stable
   rust-analyzer) ~/.cargo/bin/rust-analyzer
