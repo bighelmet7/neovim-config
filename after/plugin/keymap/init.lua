@@ -7,16 +7,13 @@ nnoremap("<ESC><ESC>", ":bd<CR>")
 nnoremap("<ESC><ESC>q", ":bd!<CR>")
 
 -- local terminal
-nnoremap("<leader>z", ":belowright split term://zsh <CR>", {silent = true})
+nnoremap("<leader>z", ":belowright split term://zsh <CR>", { silent = true })
 tnoremap("<leader><ESC>", "<C-\\><C-N>")
 
 -- LSP
-nnoremap(
-    "<leader>ee",
-    function()
-        vim.diagnostic.open_float()
-    end
-)
+nnoremap("<leader>ee", function()
+	vim.diagnostic.open_float()
+end)
 
 -- nvim-tree
 nnoremap("<leader>tt", ":NvimTreeToggle<CR>")
@@ -27,17 +24,15 @@ nnoremap("<leader>n", ":NvimTreeFindFile<CR>")
 nnoremap("<leader>tk", "<CMD>Telescope keymaps<CR>")
 nnoremap("<leader>tf", "<CMD>Telescope find_files<CR>")
 nnoremap("<leader>tg", "<CMD>Telescope live_grep<CR>")
+nnoremap("<leader>gt", "<CMD>Telescope git_commits<CR>")
 nnoremap("<leader>tb", "<CMD>Telescope buffers<CR>")
 nnoremap("<leader>th", "<CMD>Telescope help_tags<CR>")
-nnoremap(
-    "<leader>ts",
-    function()
-        require("telescope.builtin").grep_string({search = vim.fn.input("Grep For > ")})
-    end
-)
+nnoremap("<leader>ts", function()
+	require("telescope.builtin").grep_string({ search = vim.fn.input("Grep For > ") })
+end)
 
 -- LazyGit
-nnoremap("<leader>gg", ":LazyGit<CR>", {noremap = true, silent = true})
+nnoremap("<leader>gg", ":LazyGit<CR>", { noremap = true, silent = true })
 
 -- bufferline
 nnoremap("<S-l>", ":BufferLineCycleNext<CR>")
@@ -59,85 +54,46 @@ nnoremap("<leader>mp", ":MarkdownPreview<CR>")
 nnoremap("<leader>ms", ":MarkdownPreviewStop<CR>")
 
 -- dap
-nnoremap(
-    "<leader>db",
-    function()
-        require("dap").toggle_breakpoint()
-    end
-)
-nnoremap(
-    "<leader>dc",
-    function()
-        require("dap").continue()
-    end
-)
-nnoremap(
-    "<leader>dcl",
-    function()
-        require("dap").close()
-    end
-)
-nnoremap(
-    "<leader>do",
-    function()
-        require("dap").step_over()
-    end
-)
-nnoremap(
-    "<leader>di",
-    function()
-        require("dap").step_into()
-    end
-)
-nnoremap(
-    "<leader>dr",
-    function()
-        require("dap").repl.open()
-    end
-)
-nnoremap(
-    "<leader>dt",
-    function()
-        require("dap").terminate()
-    end
-)
+nnoremap("<leader>db", function()
+	require("dap").toggle_breakpoint()
+end)
+nnoremap("<leader>dc", function()
+	require("dap").continue()
+end)
+nnoremap("<leader>dcl", function()
+	require("dap").close()
+end)
+nnoremap("<leader>do", function()
+	require("dap").step_over()
+end)
+nnoremap("<leader>di", function()
+	require("dap").step_into()
+end)
+nnoremap("<leader>dr", function()
+	require("dap").repl.open()
+end)
+nnoremap("<leader>dt", function()
+	require("dap").terminate()
+end)
 
 -- dap-ui
-nnoremap(
-    "<leader>dao",
-    function()
-        require("dapui").open({})
-    end
-)
-nnoremap(
-    "<leader>dac",
-    function()
-        require("dapui").close({})
-    end
-)
-nnoremap(
-    "<leader>dat",
-    function()
-        require("dapui").toggle({})
-    end
-)
+nnoremap("<leader>dao", function()
+	require("dapui").open({})
+end)
+nnoremap("<leader>dac", function()
+	require("dapui").close({})
+end)
+nnoremap("<leader>dat", function()
+	require("dapui").toggle({})
+end)
 
 -- dap-python
-nnoremap(
-    "<leader>dn",
-    function()
-        require("dap-python").test_method({})
-    end
-)
-nnoremap(
-    "<leader>df",
-    function()
-        require("dap-python").test_class({})
-    end
-)
-vnoremap(
-    "<leader>ds<ESC>",
-    function()
-        require("dap-python").debug_selection({})
-    end
-)
+nnoremap("<leader>dn", function()
+	require("dap-python").test_method({})
+end)
+nnoremap("<leader>df", function()
+	require("dap-python").test_class({})
+end)
+vnoremap("<leader>ds<ESC>", function()
+	require("dap-python").debug_selection({})
+end)
