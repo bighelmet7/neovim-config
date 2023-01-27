@@ -5,6 +5,10 @@ return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
 
+	-- icons
+	--
+	use("nvim-tree/nvim-web-devicons")
+
 	-- lsp
 	-- NOTE: nvim-lspconfig doesn't configure keymap by default:
 	-- https://github.com/neovim/nvim-lspconfig#suggested-configuration
@@ -24,14 +28,26 @@ return require("packer").startup(function(use)
 
 	-- dap
 	--
+	use("mfussenegger/nvim-dap")
+	use("leoluz/nvim-dap-go")
+	use("mfussenegger/nvim-dap-python")
 	use({
-		"mfussenegger/nvim-dap",
+		"rcarriga/nvim-dap-ui",
 		ensure_dependencies = true,
 		requires = {
-			"rcarriga/nvim-dap-ui",
-			"leoluz/nvim-dap-go",
-			"mfussenegger/nvim-dap-python",
+			"mfussenegger/nvim-dap",
 		},
+	})
+	use({
+		"folke/neodev.nvim",
+		requires = { "rcarriga/nvim-dap-ui" },
+		config = function()
+			require("neodev").setup({
+				library = {
+					plugins = { "nvim-dap-ui", types = true },
+				},
+			})
+		end,
 	})
 
 	-- formatter
@@ -114,7 +130,6 @@ return require("packer").startup(function(use)
 			"SmiteshP/nvim-navic",
 			"nvim-tree/nvim-web-devicons", -- optional dependency
 		},
-		after = "nvim-web-devicons", -- keep this if you're using NvChad
 		config = function()
 			require("barbecue").setup()
 		end,
