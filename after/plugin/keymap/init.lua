@@ -23,6 +23,7 @@ nnoremap("<leader>n", ":NvimTreeFindFile<CR>")
 -- Telescope
 nnoremap("<C-t>", "<CMD>Telescope find_files<CR>")
 nnoremap("<leader>tk", "<CMD>Telescope keymaps<CR>")
+nnoremap("<leader>ll", "<CMD>Telescope current_buffer_fuzzy_find<CR>")
 nnoremap("<leader>tg", "<CMD>Telescope live_grep<CR>")
 nnoremap("<leader>gt", "<CMD>Telescope git_commits<CR>")
 nnoremap("<leader>tb", "<CMD>Telescope buffers<CR>")
