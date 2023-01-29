@@ -80,8 +80,6 @@ pip install pynvim
 - brew install deno
 - cargo install stylua
 - npm install -g @astrojs/language-server
-- rustup component add rust-analyzer && ln -s $(rustup which --toolchain stable
-  rust-analyzer) ~/.cargo/bin/rust-analyzer
 
 # LSP config
 
