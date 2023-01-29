@@ -15,8 +15,13 @@ nnoremap("<leader>ee", function()
 	vim.diagnostic.open_float()
 end)
 
+-- nvim-tree
+nnoremap("<leader>tt", ":NvimTreeToggle<CR>")
+nnoremap("<leader>r", ":NvimTreeRefresh<CR>")
+nnoremap("<leader>n", ":NvimTreeFindFile<CR>")
+
 -- Telescope
-nnoremap("<leader>tt", "<CMD>Telescope find_files<CR>")
+nnoremap("<C-t>", "<CMD>Telescope find_files<CR>")
 nnoremap("<leader>tk", "<CMD>Telescope keymaps<CR>")
 nnoremap("<leader>tg", "<CMD>Telescope live_grep<CR>")
 nnoremap("<leader>gt", "<CMD>Telescope git_commits<CR>")
