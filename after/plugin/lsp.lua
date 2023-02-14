@@ -45,9 +45,9 @@ local function config(_config)
 			nnoremap("K", function()
 				vim.lsp.buf.hover()
 			end)
-			nnoremap("<leader>vws", function()
+			nnoremap("<leader>ws", function()
 				vim.lsp.buf.workspace_symbol()
-			end)
+			end, { desc = "[W]orkspace [S]ymbol" })
 			nnoremap("<leader>vd", function()
 				vim.diagnostic.open_float()
 			end)
@@ -57,16 +57,16 @@ local function config(_config)
 			nnoremap("]d", function()
 				vim.diagnostic.goto_prev()
 			end)
-			nnoremap("<leader>vca", function()
+			nnoremap("<leader>ca", function()
 				vim.lsp.buf.code_action()
-			end)
-			nnoremap("<leader>vrr", function()
+			end, { desc = "[C]ode [A]ction" })
+			nnoremap("<leader>rr", function()
 				vim.lsp.buf.references()
-			end)
+			end, { desc = "[R]efe[r]ences" })
 			nnoremap("<leader>vrn", function()
 				vim.lsp.buf.rename()
 			end)
-			inoremap("<C-h>", function()
+			inoremap("<C-i>", function()
 				vim.lsp.buf.signature_help()
 			end)
 		end,
@@ -92,7 +92,6 @@ local servers = {
 	}),
 	eslint = config(),
 	tsserver = config(),
-	denols = config(),
 	astro = config(),
 	yamlls = config(),
 	rust_analyzer = config({
