@@ -32,21 +32,6 @@ brew install --cask font-hack-nerd-font
 - oh-my-zsh!
 - font-hack-nerd-font
 
-## neovim plugin dependencies
-
-- brew install lazygit
-- brew install ripgrep
-- brew install fd
-- brew install jq
-- pip3 install pynvim
-- npm install -g neovim
-- packer
-
-```
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
 ## create .env file
 
 ```
@@ -56,32 +41,26 @@ cd ~/.config/nvim
 pip install pynvim
 ```
 
-## neoformat dependencies
+## neovim plugin dependencies
 
-- cargo install stylua (https://github.com/JohnnyMorganz/StyLua)
-- npm install -g prettier
+- brew install lazygit
+- brew install ripgrep
+- brew install fd
+- brew install jq
+- pip3 install pynvim
+- npm install -g neovim
+
+
+# Mason
+## format.nvim dependencies
+Go to ./lua/plugins/formatter.lua and install all the listed packages with `:Mason`
 
 ## DAP dependencies
-
-:warning: use ~/.config/nvim/.env virtualenv
-
-- python: pip install debugpy
-- rust: brew install llvm
+Go to ./after/plugin/dap.lua and install all the listed packages with `:Mason`
+> :warning: C/C++/Rust: brew install llvm
 
 ## LSP dependencies
-
-- go install golang.org/x/tools/gopls@latest
-- go install github.com/lighttiger2505/sqls@latest
-- npm i -g vscode-langservers-extracted
-- npm install -g typescript typescript-language-server
-- npm i -g pyright
-- npm i -g yaml-language-server
-- brew install lua-language-server
-- brew install deno
-- cargo install stylua
-- npm install -g @astrojs/language-server
-
-# LSP config
+Go to ./after/plugin/lsp.lua and install all the listed packages with `:Mason`
 
 ## sqls
 
