@@ -73,74 +73,70 @@ local function config(_config)
 	}, _config or {})
 end
 
--- Python
-require("lspconfig").pyright.setup(config())
-
--- Go
-require("lspconfig").gopls.setup(config({
-	cmd = { "gopls", "serve" },
-	settings = {
-		gopls = {
+local servers = {
+	pyright = config(),
+	gopls = config({
+		cmd = { "gopls", "serve" },
+		settings = {
 			analyses = {
 				unusedparams = true,
 			},
 			staticcheck = true,
 		},
-	},
-}))
-
--- HTML
-require("lspconfig").html.setup(config())
-
--- SQL
-require("lspconfig").sqls.setup(config({
-	on_attach = function(client, bufnr)
-		require("sqls").on_attach(client, bufnr)
-	end,
-}))
-
--- Javascript
-require("lspconfig").eslint.setup(config())
-
--- Typescript
-require("lspconfig").tsserver.setup(config())
-
--- Deno
-require("lspconfig").denols.setup(config())
-
--- AstroJS
-require("lspconfig").astro.setup(config())
-
--- yaml
--- NOTE: for more information:
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls
-require("lspconfig").yamlls.setup(config())
-
--- rust (rust-tools provides more functionalities than the std nvim-lsp)
-require("lspconfig").rust_analyzer.setup(config({
-	cmd = { "rustup", "run", "stable", "rust-analyzer" },
-}))
-
--- lua
-require("lspconfig").lua_ls.setup(config({
-	settings = {
-		Lua = {
-			runtime = {
-				-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-				version = "LuaJIT",
-			},
-			diagnostics = {
-				-- Get the language server to recognize the `vim` global
-				globals = { "vim" },
-			},
-			workspace = {
-				-- Make the server aware of Neovim runtime files
-				library = vim.api.nvim_get_runtime_file("", true),
-			},
-			-- Do not send telemetry data containing a randomized but unique identifier
-			telemetry = {
-				enable = false,
+	}),
+	html = config(),
+	sqls = config({
+		on_attach = function(client, bufnr)
+			require("sqls").on_attach(client, bufnr)
+		end,
+	}),
+	eslint = config(),
+	tsserver = config(),
+	denols = config(),
+	astro = config(),
+	yamlls = config(),
+	rust_analyzer = config({
+		cmd = { "rustup", "run", "stable", "rust-analyzer" },
+	}),
+	lua_ls = config({
+		settings = {
+			Lua = {
+				runtime = {
+					-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+					version = "LuaJIT",
+				},
+				diagnostics = {
+					-- Get the language server to recognize the `vim` global
+					globals = { "vim" },
+				},
+				workspace = {
+					-- Make the server aware of Neovim runtime files
+					library = vim.api.nvim_get_runtime_file("", true),
+				},
+				-- Do not send telemetry data containing a randomized but unique identifier
+				telemetry = {
+					enable = false,
+				},
 			},
 		},
-	},
-}))
+	}),
+}
+
+-- Setup mason so it can manage external tooling
+require("mason").setup()
+
+-- Ensure the servers above are installed
+local mason_lspconfig = require("mason-lspconfig")
+
+mason_lspconfig.setup({
+	ensure_installed = vim.tbl_keys(servers),
+})
+
+mason_lspconfig.setup_handlers({
+	function(server_name)
+		require("lspconfig")[server_name].setup(servers[server_name])
+	end,
+})
+
+-- Turn on lsp status information
+require("fidget").setup()
