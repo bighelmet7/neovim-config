@@ -6,21 +6,21 @@ nnoremap("<ESC><ESC>", ":bd<CR>")
 nnoremap("<ESC><ESC>q", ":bd!<CR>")
 
 -- local terminal
-nnoremap("<leader>z", ":belowright split term://zsh <CR>", { silent = true })
+nnoremap("<leader>z", ":belowright split term://zsh <CR>", { silent = true, desc = "Close terminal" })
 tnoremap("<leader><ESC>", "<C-\\><C-N>")
 
 -- LSP
-nnoremap("<leader>ee", function()
+nnoremap("<leader>of", function()
 	vim.diagnostic.open_float()
-end)
+end, { desc = "[O]pen [F]loat" })
 
 -- formatter
 nnoremap("<leader>fw", ":FormatWrite<CR>", { desc = "[F]ormat [W]rite" })
 
 -- nvim-tree
-nnoremap("<leader>tt", ":NvimTreeToggle<CR>")
-nnoremap("<leader>r", ":NvimTreeRefresh<CR>")
-nnoremap("<leader>n", ":NvimTreeFindFile<CR>")
+nnoremap("<leader>tt", ":NvimTreeToggle<CR>", { desc = "[T]oogle [T]ree" })
+nnoremap("<leader>r", ":NvimTreeRefresh<CR>", { desc = "Tree [R]efresh" })
+nnoremap("<leader>n", ":NvimTreeFindFile<CR>", { desc = "[n] Tree Find File" })
 
 -- Telescope
 -- See `:help telescope.builtin`
@@ -41,7 +41,7 @@ nnoremap("<leader>sw", require("telescope.builtin").grep_string, { desc = "[S]ea
 nnoremap("<leader>sd", require("telescope.builtin").diagnostics, { desc = "[S]earch [D]iagnostics" })
 
 -- LazyGit
-nnoremap("<leader>gg", ":LazyGit<CR>", { noremap = true, silent = true })
+nnoremap("<leader>gg", ":LazyGit<CR>", { noremap = true, silent = true, desc = "[gg] Lazy Git" })
 
 -- bufferline
 nnoremap("<S-l>", ":BufferLineCycleNext<CR>")
@@ -51,16 +51,16 @@ nnoremap("<S-p>", ":BufferLineTogglePin<CR>")
 nnoremap("<S-ESC>", ":BufferLinePickClose<CR>")
 
 -- sqls
-nnoremap("<leader>ds", ":SqlsShowDatabases<CR>")
-nnoremap("<leader>st", ":SqlsShowTables<CR>")
-nnoremap("<leader>ss", ":SqlsShowSchemas<CR>")
-nnoremap("<leader>sc", ":SqlsSwitchConnection<CR>")
-nnoremap("<leader>se", ":SqlsExecuteQuery<CR>")
-nnoremap("<leader>sev", ":SqlsExecuteQueryVertical<CR>")
+nnoremap("<leader>ds", ":SqlsShowDatabases<CR>", { desc = "[ds] Show Databases" })
+nnoremap("<leader>st", ":SqlsShowTables<CR>", { desc = "[S]how [T]ables" })
+nnoremap("<leader>ss", ":SqlsShowSchemas<CR>", { desc = "[S]how [S]chemas" })
+nnoremap("<leader>sc", ":SqlsSwitchConnection<CR>", { desc = "[S]witch [C]onnection" })
+nnoremap("<leader>eq", ":SqlsExecuteQuery<CR>", { desc = "[E]xecute [Q]uery" })
+nnoremap("<leader>eqv", ":SqlsExecuteQueryVertical<CR>", { desc = "[E]xecute [Q]uery [V]ertical" })
 
 -- markdown-preview
-nnoremap("<leader>mp", ":MarkdownPreview<CR>")
-nnoremap("<leader>ms", ":MarkdownPreviewStop<CR>")
+nnoremap("<leader>mp", ":MarkdownPreview<CR>", { desc = "[M]arkdown [P]review" })
+nnoremap("<leader>ms", ":MarkdownPreviewStop<CR>", { desc = "[M]arkdown [S]top" })
 
 -- dap
 --nnoremap("<leader>db", function()
