@@ -13,6 +13,10 @@ vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_ruby_provider = 0
 
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- NOTE: really handy when debugging
 -- vim.g.neoformat_verbose = 1
 
@@ -27,6 +31,9 @@ vim.opt.scrolloff = 10
 vim.opt.cmdheight = 1
 vim.opt.termguicolors = true -- for bufferline
 vim.opt.completeopt = "menu,menuone,noselect"
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
 
 -- local to buffer
 vim.opt.swapfile = false
@@ -49,5 +56,5 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- others
 vim.g.markdown_fenced_languages = {
-    "ts=typescript"
+	"ts=typescript",
 }

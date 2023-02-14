@@ -1,54 +1,16 @@
 require("bighelmet7.set")
 
--- disable netrw at the very start of your init.lua (strongly advised)
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
 
--- set termguicolors to enable highlight groups
-vim.opt.termguicolors = true
-
--- Lazy
-require("bighelmet7.lazy")
-
--- Plugins
---
--- Telescope
-require("telescope.builtin")
-
--- Lualine
-require("lualine").setup({
-	options = {
-		theme = "rose-pine",
-	},
-})
-
--- bufferline
---
-require("bufferline").setup({
-	options = {
-		offsets = {
-			{ filetype = "NvimTree", text = "File Explorer", padding = 1 },
-		},
-		max_name_length = 14,
-		max_prefix_length = 13,
-		tab_size = 20,
-		separator_style = "thin",
-	},
-})
-
--- nvim-tree.lua and nvim-web-devicons
-require("nvim-web-devicons").setup({ default = true })
-require("nvim-tree").setup({
-	git = { ignore = false },
-	view = { side = "left" },
-	renderer = {
-		icons = {
-			glyphs = {
-				git = {
-					untracked = "🤷",
-					unstaged = "👀",
-				},
-			},
-		},
-	},
-})
+require("lazy").setup("plugins")
