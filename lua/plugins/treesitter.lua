@@ -45,10 +45,10 @@ return {
 			incremental_selection = {
 				enable = true,
 				keymaps = {
-					init_selection = "<c-space>",
-					node_incremental = "<c-space>",
-					scope_incremental = "<c-s>",
-					node_decremental = "<c-backspace>",
+					init_selection = "<C-SPACE>",
+					node_incremental = "<C-SPACE>",
+					scope_incremental = "<C-ESC>",
+					node_decremental = "<C-BACKSPACE>",
 				},
 			},
 			textobjects = {
