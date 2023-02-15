@@ -42,6 +42,57 @@ return {
 			yadm = {
 				enable = false,
 			},
+
+			on_attach = function(bufnr)
+				local gs = package.loaded.gitsigns
+
+				local function map(mode, l, r, opts)
+					opts = opts or {}
+					opts.buffer = bufnr
+					vim.keymap.set(mode, l, r, opts)
+				end
+
+				-- Navigation
+				map("n", "]c", function()
+					if vim.wo.diff then
+						return "]c"
+					end
+					vim.schedule(function()
+						gs.next_hunk()
+					end)
+					return "<Ignore>"
+				end, { expr = true, desc = "[ ]c ] Next Hunk" })
+
+				map("n", "[c", function()
+					if vim.wo.diff then
+						return "[c"
+					end
+					vim.schedule(function()
+						gs.prev_hunk()
+					end)
+					return "<Ignore>"
+				end, { expr = true, desc = "[ [c ] Prev Hunk" })
+
+				-- Actions
+				map({ "n", "v" }, "<leader>hs", ":Gitsigns stage_hunk<CR>", { desc = "[hs] Stage Hunk"})
+				map({ "n", "v" }, "<leader>hr", ":Gitsigns reset_hunk<CR>", { desc = "[hr] Reset Hunk" })
+				map("n", "<leader>hS", gs.stage_buffer, { desc = "[hs] Stage buffer" })
+				map("n", "<leader>hu", gs.undo_stage_hunk, { desc = "[hu] Undo Stage buffer" })
+				map("n", "<leader>hR", gs.reset_buffer, { desc = "[hR] Reset Buffer" })
+				map("n", "<leader>hp", gs.preview_hunk, { desc = "[hp] Preview hunk" })
+				map("n", "<leader>hb", function()
+					gs.blame_line({ full = true })
+				end, { desc = "[hb] Blame line" })
+				map("n", "<leader>tb", gs.toggle_current_line_blame, { desc = "[T]oggle Current Line [B]lame" })
+				map("n", "<leader>hd", gs.diffthis, { desc = "[hd] Diff this" })
+				map("n", "<leader>hD", function()
+					gs.diffthis("~")
+				end, { desc = "[hD] Diff this ~" })
+				map("n", "<leader>td", gs.toggle_deleted, { desc = "[T]oggle [D]eleted" })
+
+				-- Text object
+				map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
+			end,
 		})
 	end,
 }
