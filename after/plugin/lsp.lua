@@ -1,5 +1,10 @@
 local nnoremap = require("bighelmet7.keymap").nnoremap
-local inoremap = require("bighelmet7.keymap").inoremap
+
+require("neodev").setup({
+	library = {
+		plugins = { "nvim-dap-ui", types = true },
+	},
+})
 
 -- NOTE: https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -65,9 +70,6 @@ local function config(_config)
 			end, { desc = "[R]efe[r]ences" })
 			nnoremap("<leader>vrn", function()
 				vim.lsp.buf.rename()
-			end)
-			inoremap("<C-i>", function()
-				vim.lsp.buf.signature_help()
 			end)
 		end,
 	}, _config or {})
