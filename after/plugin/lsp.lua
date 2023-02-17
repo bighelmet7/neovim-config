@@ -76,6 +76,7 @@ local function config(_config)
 end
 
 local servers = {
+    terraformls = config(),
 	pyright = config(),
 	gopls = config({
 		cmd = { "gopls", "serve" },
