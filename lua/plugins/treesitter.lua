@@ -34,6 +34,8 @@ return {
 				"typescript",
 				"javascript",
 				"sql",
+				"hcl",
+				"terraform",
 			},
 			sync_install = false,
 			ignore_install = { "php", "phpdoc" },
