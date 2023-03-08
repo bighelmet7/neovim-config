@@ -47,7 +47,6 @@ return {
 		build = function()
 			vim.fn["mkdp#util#install"]()
 		end,
-		lazy = true,
 	},
 
 	{ "dstein64/vim-startuptime", lazy = true },
