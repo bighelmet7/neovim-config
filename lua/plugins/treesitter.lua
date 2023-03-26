@@ -24,6 +24,7 @@ return {
 				"go",
 				"rust",
 				"graphql",
+                "java",
 				"json",
 				"make",
 				"markdown",

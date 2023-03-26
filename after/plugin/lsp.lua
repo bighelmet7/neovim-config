@@ -87,6 +87,7 @@ local servers = {
 			staticcheck = true,
 		},
 	}),
+    jdtls = config(),
 	html = config(),
 	sqls = config({
 		on_attach = function(client, bufnr)
