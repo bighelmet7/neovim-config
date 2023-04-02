@@ -50,9 +50,9 @@ nnoremap("<leader>ha", function()
 	require("harpoon.mark").add_file()
 end, { desc = "[H]arpoon [A]dd file" })
 
-nnoremap("<leader>h", function()
+nnoremap("<leader>hh", function()
 	require("harpoon.ui").toggle_quick_menu()
-end, { desc = "[H]arpoon UI" })
+end, { desc = "[H]arpoon [U]I" })
 
 nnoremap("<leader>nn", function()
 	require("harpoon.ui").nav_next()
