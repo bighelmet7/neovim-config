@@ -5,6 +5,7 @@ local vnoremap = require("bighelmet7.keymap").vnoremap
 -- convenient mappings
 nnoremap("<ESC><ESC>", ":bd<CR>")
 nnoremap("<ESC><ESC>q", ":bd!<CR>")
+nnoremap("<C-.>", "<C-^>", { desc = "alternate files" })
 
 -- local terminal
 nnoremap("<leader>z", ":belowright split term://zsh <CR>", { silent = true, desc = "Close terminal" })
@@ -44,12 +45,22 @@ nnoremap("<leader>sd", require("telescope.builtin").diagnostics, { desc = "[S]ea
 -- LazyGit
 nnoremap("<leader>gg", ":LazyGit<CR>", { noremap = true, silent = true, desc = "[gg] Lazy Git" })
 
--- bufferline
-nnoremap("<S-l>", ":BufferLineCycleNext<CR>")
-nnoremap("<S-h>", ":BufferLineCyclePrev<CR>")
-nnoremap("<S-k>", ":BufferLineCloseRight<CR>")
-nnoremap("<S-p>", ":BufferLineTogglePin<CR>")
-nnoremap("<S-ESC>", ":BufferLinePickClose<CR>")
+-- harpoon
+nnoremap("<leader>ha", function()
+	require("harpoon.mark").add_file()
+end, { desc = "[H]arpoon [A]dd file" })
+
+nnoremap("<leader>h", function()
+	require("harpoon.ui").toggle_quick_menu()
+end, { desc = "[H]arpoon UI" })
+
+nnoremap("<leader>nn", function()
+	require("harpoon.ui").nav_next()
+end, { desc = "Harpoon [N][N]ext" })
+
+nnoremap("<leader>hn", function()
+	require("harpoon.ui").nav_next()
+end, { desc = "[H]arpoon [N]Previous" })
 
 -- sqls
 nnoremap("<leader>ds", ":SqlsShowDatabases<CR>", { desc = "[ds] Show Databases" })
