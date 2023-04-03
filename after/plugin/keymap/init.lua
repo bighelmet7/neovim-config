@@ -71,7 +71,18 @@ nnoremap("<leader>eq", ":SqlsExecuteQuery<CR>", { desc = "[E]xecute [Q]uery" })
 nnoremap("<leader>eqv", ":SqlsExecuteQueryVertical<CR>", { desc = "[E]xecute [Q]uery [V]ertical" })
 
 -- markdown-preview
-nnoremap("<leader>mp", ":MarkdownPreview<CR>", { desc = "[M]arkdown [P]review" })
+nnoremap("<leader>mp", function ()
+    vim.g.mkdp_theme = 'dark'
+    vim.cmd({
+        cmd = 'MarkdownPreview'
+    })
+end, { desc = "[M]arkdown [P]review" })
+nnoremap("<leader>ml", function ()
+    vim.g.mkdp_theme = 'light'
+    vim.cmd({
+        cmd = 'MarkdownPreview'
+    })
+end, { desc = "[M]arkdown [P]review Light" })
 nnoremap("<leader>ms", ":MarkdownPreviewStop<CR>", { desc = "[M]arkdown [S]top" })
 
 -- dap
