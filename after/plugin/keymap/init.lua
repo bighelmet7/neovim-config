@@ -59,7 +59,7 @@ nnoremap("<leader>nn", function()
 end, { desc = "Harpoon [N][N]ext" })
 
 nnoremap("<leader>hn", function()
-	require("harpoon.ui").nav_next()
+	require("harpoon.ui").nav_prev()
 end, { desc = "[H]arpoon [N]Previous" })
 
 -- sqls
