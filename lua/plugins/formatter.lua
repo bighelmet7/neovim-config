@@ -40,37 +40,47 @@ return {
 					end,
 				},
 
-                python = {
+				python = {
 					require("formatter.filetypes.python").black,
-                },
+				},
 
-                go = {
-                    require("formatter.filetypes.go").goimports,
-                },
+				go = {
+					require("formatter.filetypes.go").goimports,
+				},
 
-                rust = {
-                    require("formatter.filetypes.rust").rustfmt,
-                },
+				rust = {
+					require("formatter.filetypes.rust").rustfmt,
+				},
 
-                json = {
-                    require("formatter.filetypes.json").jq,
-                },
+				json = {
+					require("formatter.filetypes.json").jq,
+				},
 
-                html = {
-                    require("formatter.filetypes.html").htmlbeautify,
-                },
+				html = {
+					require("formatter.filetypes.html").htmlbeautify,
+				},
 
-                javascript = {
-                    require("formatter.filetypes.javascript").prettier,
-                },
+				javascript = {
+					require("formatter.filetypes.javascript").prettier,
+				},
 
-                typescript = {
-                    require("formatter.filetypes.typescript").prettier,
-                },
+				typescript = {
+					require("formatter.filetypes.typescript").prettier,
+				},
 
-                typescriptreact = {
-                    require("formatter.filetypes.typescript").prettier,
-                },
+				typescriptreact = {
+					require("formatter.filetypes.typescript").prettier,
+				},
+
+				sql = {
+					function()
+						return {
+							exe = "sqlfmt",
+							args = { "-" },
+							stdin = true,
+						}
+					end,
+				},
 
 				-- Use the special "*" filetype for defining formatter configurations on
 				-- any filetype
