@@ -82,6 +82,16 @@ return {
 					end,
 				},
 
+                ocaml = {
+                    function ()
+                        return {
+                            exe = "ocamlformat",
+                            args = { "-" },
+                            stdin = true,
+                        }
+                    end
+                },
+
 				-- Use the special "*" filetype for defining formatter configurations on
 				-- any filetype
 				["*"] = {
