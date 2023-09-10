@@ -62,13 +62,7 @@ nnoremap("<leader>hn", function()
 	require("harpoon.ui").nav_prev()
 end, { desc = "[H]arpoon [N]Previous" })
 
--- sqls
-nnoremap("<leader>ds", ":SqlsShowDatabases<CR>", { desc = "[ds] Show Databases" })
-nnoremap("<leader>st", ":SqlsShowTables<CR>", { desc = "[S]how [T]ables" })
-nnoremap("<leader>ss", ":SqlsShowSchemas<CR>", { desc = "[S]how [S]chemas" })
-nnoremap("<leader>sc", ":SqlsSwitchConnection<CR>", { desc = "[S]witch [C]onnection" })
-nnoremap("<leader>eq", ":SqlsExecuteQuery<CR>", { desc = "[E]xecute [Q]uery" })
-nnoremap("<leader>eqv", ":SqlsExecuteQueryVertical<CR>", { desc = "[E]xecute [Q]uery [V]ertical" })
+-- sql
 
 -- markdown-preview
 nnoremap("<leader>mp", function ()

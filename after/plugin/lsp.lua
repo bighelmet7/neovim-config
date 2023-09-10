@@ -89,11 +89,6 @@ local servers = {
 	}),
     jdtls = config(),
 	html = config(),
-	sqls = config({
-		on_attach = function(client, bufnr)
-			require("sqls").on_attach(client, bufnr)
-		end,
-	}),
 	eslint = config(),
 	tsserver = config(),
 	astro = config(),

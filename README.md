@@ -62,13 +62,16 @@ Go to ./after/plugin/dap.lua and install all the listed packages with `:Mason`
 ## LSP dependencies
 Go to ./after/plugin/lsp.lua and install all the listed packages with `:Mason`
 
-## sqls
+## SQL
 
-- sqls config: https://github.com/lighttiger2505/sqls#db-configuration
+run:
+```bash
+export DATABASE_NAME="dev"
+export DATABASE_URL="postgres://user:password@127.0.0.1:15432/db"
+```
+you need to create/overwrite the export variables before connecting.
 
-you need to create a config.yml with all of the databases connections, the
-config should be in ~/.config/sqls/config.yml, you can follow the example of the
-above link.
+> TODO: add a way to read an env file an load a list of DB connections.
 
 # links
 

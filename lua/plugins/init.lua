@@ -36,10 +36,6 @@ return {
 	--
 	{ "kdheepak/lazygit.nvim" },
 
-	-- sqls
-	--
-	{ "nanotee/sqls.nvim", lazy = true },
-
 	-- marksdown preview
 	--
 	{
