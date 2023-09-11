@@ -64,14 +64,20 @@ Go to ./after/plugin/lsp.lua and install all the listed packages with `:Mason`
 
 ## SQL
 
-run:
-```bash
-export DATABASE_NAME="dev"
-export DATABASE_URL="postgres://user:password@127.0.0.1:15432/db"
-```
-you need to create/overwrite the export variables before connecting.
+Create a dbs.lua file inside the lua/bighelmet7 directory, following the below
+format
 
-> TODO: add a way to read an env file an load a list of DB connections.
+```lua
+-- DBs table example
+local _M = {
+	{
+		name = "local",
+		url = "postgres://postgres:postgres@127.0.0.1:15432/postgres",
+	},
+}
+
+return _M
+```
 
 # links
 
