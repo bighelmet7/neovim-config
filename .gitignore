@@ -1,7 +1,7 @@
 packer_compiled.lua
 lazy-lock.json
 
-dbs.lua
+lua/bighelmet7/dbs.lua
 
 # python
 .env
