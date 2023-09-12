@@ -32,9 +32,8 @@ return {
 		end,
 	},
 
-	-- lazygit
+	-- git
 	--
-	{ "kdheepak/lazygit.nvim" },
 	{ "tpope/vim-fugitive" },
 
 	-- marksdown preview

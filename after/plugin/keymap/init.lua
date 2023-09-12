@@ -42,9 +42,6 @@ nnoremap("<leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earc
 nnoremap("<leader>sw", require("telescope.builtin").grep_string, { desc = "[S]earch current [W]ord" })
 nnoremap("<leader>sd", require("telescope.builtin").diagnostics, { desc = "[S]earch [D]iagnostics" })
 
--- LazyGit
-nnoremap("<leader>gg", ":LazyGit<CR>", { noremap = true, silent = true, desc = "[gg] Lazy Git" })
-
 -- harpoon
 nnoremap("<leader>ha", function()
 	require("harpoon.mark").add_file()

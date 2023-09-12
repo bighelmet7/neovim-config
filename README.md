@@ -43,7 +43,7 @@ pip install pynvim
 
 ## neovim plugin dependencies
 
-- brew install lazygit
+- brew install lazygit (optional, in case you don't want to use fugitive)
 - brew install ripgrep
 - brew install fd
 - brew install jq
