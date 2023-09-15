@@ -26,7 +26,9 @@ nnoremap("<leader>n", ":NvimTreeFindFile<CR>", { desc = "[n] Tree Find File" })
 
 -- Telescope
 -- See `:help telescope.builtin`
-nnoremap("<C-t>", require("telescope.builtin").find_files, { desc = "[C-t] Search Files" })
+nnoremap("<C-t>", function()
+	require("telescope.builtin").find_files({ hidden = true })
+end, { desc = "[C-t] Search Files" })
 nnoremap("<leader>sk", require("telescope.builtin").keymaps, { desc = "[S]earch [K]eymaps" })
 nnoremap("<leader>/", function()
 	-- You can pass additional configuration to telescope to change theme, layout, etc.
@@ -35,7 +37,9 @@ nnoremap("<leader>/", function()
 		previewer = false,
 	}))
 end, { desc = "[/] Fuzzily search in current buffer]" })
-nnoremap("<leader>lg", require("telescope.builtin").live_grep, { desc = "[L]ive [G]rep" })
+nnoremap("<leader>lg", function()
+	require("telescope.builtin").live_grep()
+end, { desc = "[L]ive [G]rep" })
 nnoremap("<leader>sg", require("telescope.builtin").git_commits, { desc = "[S]earch [G]it Commit" })
 nnoremap("<leader>sb", require("telescope.builtin").buffers, { desc = "[S]earch by [B]uffers" })
 nnoremap("<leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earch [H]elp Tags" })
@@ -62,17 +66,17 @@ end, { desc = "[H]arpoon [N]Previous" })
 -- sql
 
 -- markdown-preview
-nnoremap("<leader>mp", function ()
-    vim.g.mkdp_theme = 'dark'
-    vim.cmd({
-        cmd = 'MarkdownPreview'
-    })
+nnoremap("<leader>mp", function()
+	vim.g.mkdp_theme = "dark"
+	vim.cmd({
+		cmd = "MarkdownPreview",
+	})
 end, { desc = "[M]arkdown [P]review" })
-nnoremap("<leader>ml", function ()
-    vim.g.mkdp_theme = 'light'
-    vim.cmd({
-        cmd = 'MarkdownPreview'
-    })
+nnoremap("<leader>ml", function()
+	vim.g.mkdp_theme = "light"
+	vim.cmd({
+		cmd = "MarkdownPreview",
+	})
 end, { desc = "[M]arkdown [P]review Light" })
 nnoremap("<leader>ms", ":MarkdownPreviewStop<CR>", { desc = "[M]arkdown [S]top" })
 
