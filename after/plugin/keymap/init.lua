@@ -11,6 +11,11 @@ nnoremap("<C-.>", "<C-^>", { desc = "alternate files" })
 nnoremap("<leader>z", ":belowright split term://zsh <CR>", { silent = true, desc = "Close terminal" })
 tnoremap("<leader><ESC>", "<C-\\><C-N>")
 
+-- Git
+nnoremap("<leader>gP", ":Git push", { desc = "[G]it [P]ush" })
+nnoremap("<leader>gp", ":Git pull", { desc = "[G]it [P]ull" })
+nnoremap("<leader>gg", ":Git", { desc = "[G][G]it Status" })
+
 -- LSP
 nnoremap("<leader>of", function()
 	vim.diagnostic.open_float()
