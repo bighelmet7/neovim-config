@@ -12,9 +12,9 @@ nnoremap("<leader>z", ":belowright split term://zsh <CR>", { silent = true, desc
 tnoremap("<leader><ESC>", "<C-\\><C-N>")
 
 -- Git
-nnoremap("<leader>gP", ":Git push", { desc = "[G]it [P]ush" })
-nnoremap("<leader>gp", ":Git pull", { desc = "[G]it [P]ull" })
-nnoremap("<leader>gg", ":Git", { desc = "[G][G]it Status" })
+nnoremap("<leader>gP", ":Git push<CR>", { desc = "[G]it [P]ush" })
+nnoremap("<leader>gp", ":Git pull<CR>", { desc = "[G]it [P]ull" })
+nnoremap("<leader>gg", ":Git<CR>", { desc = "[G][G]it Status" })
 
 -- LSP
 nnoremap("<leader>of", function()
