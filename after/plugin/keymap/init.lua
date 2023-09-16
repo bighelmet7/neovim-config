@@ -6,6 +6,8 @@ local vnoremap = require("bighelmet7.keymap").vnoremap
 nnoremap("<ESC><ESC>", ":bd<CR>")
 nnoremap("<ESC><ESC>q", ":bd!<CR>")
 nnoremap("<C-.>", "<C-^>", { desc = "alternate files" })
+nnoremap("<leader>nt", ":tabnew<CR>", { silent = true, desc = "[N]ew [T]ab" })
+nnoremap("<leader>ct", ":tabclose<CR>", { silent = true, desc = "[C]lose [T]ab" })
 
 -- local terminal
 nnoremap("<leader>z", ":belowright split term://zsh <CR>", { silent = true, desc = "Close terminal" })
@@ -69,6 +71,14 @@ nnoremap("<leader>hn", function()
 end, { desc = "[H]arpoon [N]Previous" })
 
 -- sql
+nnoremap("<leader>du", function()
+	vim.cmd({
+		cmd = "tabnew",
+	})
+	vim.cmd({
+		cmd = "DBUI",
+	})
+end, { desc = "[D]B [U]I" })
 
 -- markdown-preview
 nnoremap("<leader>mp", function()
