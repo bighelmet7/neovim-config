@@ -26,10 +26,8 @@ end, { desc = "[O]pen [F]loat" })
 -- formatter
 nnoremap("<leader>fw", ":FormatWrite<CR>", { desc = "[F]ormat [W]rite" })
 
--- nvim-tree
-nnoremap("<leader>tt", ":NvimTreeToggle<CR>", { desc = "[T]oogle [T]ree" })
-nnoremap("<leader>r", ":NvimTreeRefresh<CR>", { desc = "Tree [R]efresh" })
-nnoremap("<leader>n", ":NvimTreeFindFile<CR>", { desc = "[n] Tree Find File" })
+-- oil-nvim
+nnoremap("<leader>tt", ":Oil<CR>", { desc = "[T]oogle [T]ree" })
 
 -- Telescope
 -- See `:help telescope.builtin`
