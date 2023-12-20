@@ -52,20 +52,22 @@ nnoremap("<leader>sw", require("telescope.builtin").grep_string, { desc = "[S]ea
 nnoremap("<leader>sd", require("telescope.builtin").diagnostics, { desc = "[S]earch [D]iagnostics" })
 
 -- harpoon
+local harpoon = require("harpoon")
+
 nnoremap("<leader>ha", function()
-	require("harpoon.mark").add_file()
+	harpoon:list():append()
 end, { desc = "[H]arpoon [A]dd file" })
 
 nnoremap("<leader>hh", function()
-	require("harpoon.ui").toggle_quick_menu()
+    harpoon.ui:toggle_quick_menu(harpoon:list())
 end, { desc = "[H]arpoon [U]I" })
 
 nnoremap("<leader>nn", function()
-	require("harpoon.ui").nav_next()
+    harpoon:list():next()
 end, { desc = "Harpoon [N][N]ext" })
 
 nnoremap("<leader>hn", function()
-	require("harpoon.ui").nav_prev()
+    harpoon:list():prev()
 end, { desc = "[H]arpoon [N]Previous" })
 
 -- sql
