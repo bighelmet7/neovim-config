@@ -38,6 +38,7 @@ return {
 				"hcl",
 				"terraform",
                 "verilog",
+                "templ",
 			},
 			sync_install = false,
 			ignore_install = { "php", "phpdoc" },

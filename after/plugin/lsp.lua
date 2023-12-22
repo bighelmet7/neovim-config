@@ -75,8 +75,15 @@ local function config(_config)
 	}, _config or {})
 end
 
+-- additional filetypes
+vim.filetype.add({
+	extension = {
+		templ = "templ",
+	},
+})
+
 local servers = {
-    terraformls = config(),
+	terraformls = config(),
 	pyright = config(),
 	gopls = config({
 		cmd = { "gopls", "serve" },
@@ -87,7 +94,7 @@ local servers = {
 			staticcheck = true,
 		},
 	}),
-    jdtls = config(),
+	jdtls = config(),
 	html = config(),
 	eslint = config(),
 	tsserver = config(),
@@ -96,7 +103,7 @@ local servers = {
 	rust_analyzer = config({
 		cmd = { "rustup", "run", "stable", "rust-analyzer" },
 	}),
-    ocamllsp = config(),
+	ocamllsp = config(),
 	lua_ls = config({
 		settings = {
 			Lua = {
@@ -117,6 +124,34 @@ local servers = {
 					enable = false,
 				},
 			},
+		},
+	}),
+	templ = config({
+		cmd = { "templ", "lsp" },
+		filetypes = { "templ" },
+	}),
+	tailwindcss = config({
+		init_options = {
+			userLanguages = {
+				templ = "html",
+			},
+		},
+		filetypes = {
+			"astro",
+			"astro-markdown",
+			"django-html",
+			"htmldjango",
+			"html",
+			"markdown",
+			"css",
+			"less",
+			"sass",
+			"scss",
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact",
+			"templ",
 		},
 	}),
 }
