@@ -15,13 +15,6 @@ return {
 		end,
 	},
 
-	-- theme
-	--
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-	},
-
 	-- telescope
 	--
 	{
