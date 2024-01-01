@@ -51,6 +51,26 @@ nnoremap("<leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earc
 nnoremap("<leader>sw", require("telescope.builtin").grep_string, { desc = "[S]earch current [W]ord" })
 nnoremap("<leader>sd", require("telescope.builtin").diagnostics, { desc = "[S]earch [D]iagnostics" })
 
+-- trouble
+nnoremap("<leader>xx", function()
+	require("trouble").toggle()
+end)
+nnoremap("<leader>xw", function()
+	require("trouble").toggle("workspace_diagnostics")
+end)
+nnoremap("<leader>xd", function()
+	require("trouble").toggle("document_diagnostics")
+end)
+nnoremap("<leader>xq", function()
+	require("trouble").toggle("quickfix")
+end)
+nnoremap("<leader>xl", function()
+	require("trouble").toggle("loclist")
+end)
+nnoremap("gR", function()
+	require("trouble").toggle("lsp_references")
+end)
+
 -- harpoon
 local harpoon = require("harpoon")
 
@@ -59,15 +79,15 @@ nnoremap("<leader>ha", function()
 end, { desc = "[H]arpoon [A]dd file" })
 
 nnoremap("<leader>hh", function()
-    harpoon.ui:toggle_quick_menu(harpoon:list())
+	harpoon.ui:toggle_quick_menu(harpoon:list())
 end, { desc = "[H]arpoon [U]I" })
 
 nnoremap("<leader>nn", function()
-    harpoon:list():next()
+	harpoon:list():next()
 end, { desc = "Harpoon [N][N]ext" })
 
 nnoremap("<leader>hn", function()
-    harpoon:list():prev()
+	harpoon:list():prev()
 end, { desc = "[H]arpoon [N]Previous" })
 
 -- sql
