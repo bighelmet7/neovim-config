@@ -42,6 +42,16 @@ return {
 
 				python = {
 					require("formatter.filetypes.python").black,
+					function()
+						return {
+							exe = "black",
+							args = {
+								"-q",
+								"-",
+							},
+							stdin = true,
+						}
+					end,
 				},
 
 				go = {
