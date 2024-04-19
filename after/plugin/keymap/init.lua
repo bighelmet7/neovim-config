@@ -75,20 +75,20 @@ end, { desc = "[g][R] Trouble LSP References" })
 local harpoon = require("harpoon")
 
 nnoremap("<leader>ha", function()
-	harpoon:list():append()
+	harpoon:list():add()
 end, { desc = "[H]arpoon [A]dd file" })
 
 nnoremap("<leader>hh", function()
 	harpoon.ui:toggle_quick_menu(harpoon:list())
 end, { desc = "[H]arpoon [U]I" })
 
-nnoremap("<leader>nn", function()
-	harpoon:list():next()
-end, { desc = "Harpoon [N][N]ext" })
-
 nnoremap("<leader>hn", function()
+	harpoon:list():next()
+end, { desc = "[H]arpoon [N]ext" })
+
+nnoremap("<leader>nh", function()
 	harpoon:list():prev()
-end, { desc = "[H]arpoon [N]Previous" })
+end, { desc = "[N]Harpoon [H]Previous" })
 
 -- sql
 nnoremap("<leader>du", function()
