@@ -103,7 +103,6 @@ local servers = {
 	rust_analyzer = config({
 		cmd = { "rustup", "run", "stable", "rust-analyzer" },
 	}),
-	ocamllsp = config(),
 	lua_ls = config({
 		settings = {
 			Lua = {
