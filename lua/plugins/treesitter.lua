@@ -39,6 +39,7 @@ return {
 				"terraform",
                 "verilog",
                 "templ",
+                "gleam",
 			},
 			sync_install = false,
 			ignore_install = { "php", "phpdoc" },

@@ -171,5 +171,11 @@ mason_lspconfig.setup_handlers({
 	end,
 })
 
+-- gleam
+require("lspconfig").gleam.setup(config({
+	cmd = { "gleam", "lsp" },
+	filetypes = { "gleam" },
+}))
+
 -- Turn on lsp status information
 require("fidget").setup()
