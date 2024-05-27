@@ -92,6 +92,16 @@ return {
 					end,
 				},
 
+				gleam = {
+					function()
+						return {
+							exe = "gleam",
+							args = { "format", "--stdin" },
+							stdin = true,
+						}
+					end,
+				},
+
 				-- Use the special "*" filetype for defining formatter configurations on
 				-- any filetype
 				["*"] = {
